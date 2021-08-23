@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+
+  icon: string = 'assets/images/icons/icons-29.png'
   versionString: string = "1.0.0";
+  logoAlt: string = 'FoodPlate logo';
 
   constructor() { }
 

@@ -4,4 +4,5 @@ footer {
     height: 50px;
     position: absolute;
     text-align: left;
+    justify-content: start;
 }

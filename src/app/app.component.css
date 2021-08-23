@@ -1,0 +1,10 @@
+.header-footer {
+    min-height: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    background-color: orange;
+}

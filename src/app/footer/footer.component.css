@@ -2,7 +2,21 @@ footer {
     border-top: 5px solid black;
     bottom: 0;
     height: 50px;
+    justify-content: start;
     position: absolute;
     text-align: left;
-    justify-content: start;
+}
+
+.footer--update {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: .25em;
+    color: red;
+    font-size: .75em;
+    font-weight: bold;
+    padding: .25em;
+}
+
+.footer--update::after {
+    content: " Update Needed!";
 }

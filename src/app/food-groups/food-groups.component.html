@@ -2,5 +2,5 @@
     <img *ngFor="let group of foodGroups; first as isFirst; last as isLast"
             [src]="group.icon" [alt]="group.name"
             [class.isFirst]="isFirst"
-            [class.isLast]="isLast">
+            [class.isLast]="isLast" (click)="showGroup(group)">
 </section>

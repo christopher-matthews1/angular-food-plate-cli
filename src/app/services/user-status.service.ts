@@ -12,12 +12,12 @@ export class UserStatusService {
 
   getRegisterStatus(currentUser: User) {
     if(currentUser.registered === true) {
-      console.log(`User Registered is: ${currentUser.registered}`)
+      // console.log(`User Registered is: ${currentUser.registered}`)
     }
   }
 
   getUserStatus(currentUser: User) {
-    console.table(currentUser);
+    // console.table(currentUser);
   }
 
   constructor() { }

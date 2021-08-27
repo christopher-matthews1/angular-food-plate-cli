@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../models/User';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'fp-main',
@@ -9,16 +10,24 @@ import { User } from '../models/User';
 })
 export class MainComponent implements OnInit {
 
-  @Input() user: User;
-
+  currentUser: User;
   router: Router;
 
+  getRoute() {
+    if(this.currentUser.registered) {
+      return "my-plate"
+    } else {
+      return "register";
+    }
+  }
+
   
-  constructor(private _router: Router) {
+  constructor(private userService: UserService, private _router: Router) {
     this.router = _router;
    }
 
   ngOnInit(): void {
+    this.userService.currentUser.subscribe(user => this.currentUser = user);
   }
 
 }

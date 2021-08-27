@@ -1,4 +1,4 @@
 <section>
-    <!-- <p>{{(user.reqsStatus.fruitMet) ? fruitMet : fruitNeeded}}</p> -->
-    <p *ngIf="(!user.reqsStatus.fruitMet)">You have eaten all your fruit and protein for today</p>
+    <p>{{(currentUser.reqsStatus.fruitMet) ? fruitMet : fruitNeeded}}</p>
+    <!-- <p *ngIf="(!currentUser.reqsStatus.fruitMet)">{{fruitNeeded}}, {{getName()}}</p> -->
 </section>

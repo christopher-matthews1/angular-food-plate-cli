@@ -16,7 +16,7 @@ const routes: Routes = [
     {
         path: '',
         children: [
-            {path: '', component: PlateComponent},
+            {path: '', component: DefaultComponent},
             {path: 'register', component: RegisterComponent},
             {path: 'my-plate', component: PlateComponent},
             {path: 'farmers-market', component: FarmersMarketComponent},

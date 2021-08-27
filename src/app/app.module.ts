@@ -20,6 +20,7 @@ import { ExercisesComponent } from './exercises/exercises.component';
 import { FoodGroupsModule } from './food-groups/food-groups.module';
 import { AppRoutingModule } from './app-routing.module';
 import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
+import { FoodComponent } from './food/food.component';
 
 @NgModule({
   declarations: [ AppComponent, 
@@ -30,7 +31,12 @@ import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
     PlateComponent, 
     MessageComponent, 
     NavComponent, 
-    RegisterComponent, DefaultComponent, FarmersMarketComponent, ExercisesComponent, TodaysGoalComponent],
+    RegisterComponent, 
+    DefaultComponent, 
+    FarmersMarketComponent, 
+    ExercisesComponent, 
+    TodaysGoalComponent, 
+    FoodComponent],
   imports: [
     AppRoutingModule,
     CommonModule, 

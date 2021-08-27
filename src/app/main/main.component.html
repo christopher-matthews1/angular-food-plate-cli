@@ -2,7 +2,7 @@
     <router-outlet name="foodGroupOutlet"></router-outlet>
     <router-outlet></router-outlet>
     <!-- <fp-plate [user]="user"></fp-plate> -->
-    <fp-message></fp-message>
+    <fp-message [hidden]="!(this.router.url === '/my-plate')"></fp-message>
     <a [routerLink]="getRoute()">
         <fp-home-btn [hidden]="!(this.router.url === '/my-plate')">
         </fp-home-btn>

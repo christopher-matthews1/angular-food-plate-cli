@@ -30,8 +30,8 @@ export class AppComponent implements OnInit {
     this.reqsService.getRequirements().subscribe(
       reqs => {
         this.requirements = reqs;
-        console.table(this.requirements);
-        console.log(this.requirements[1].ageGroup);
+        // console.table(this.requirements);
+        // console.log(this.requirements[1].ageGroup);
       }
     );
   }

@@ -1,5 +1,6 @@
 <footer class="header-footer">
     <img (click)="moreInfo()" [src]="icon" alt={{logoAlt}}>
+    <p *ngIf="goal" (click)="clearGoal()">Don't forget: {{ goal }}</p>
     <p>&copy;2021 Food Plate Inc. 
         <small [attr.data-version]="versionString" [class.footer--update]="!isCurrent">Version #{{versionString}}
         </small>

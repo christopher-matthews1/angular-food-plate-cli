@@ -20,18 +20,8 @@ export class RegisterComponent implements OnInit {
   regForm: FormGroup;
 
   onSubmit() {
-    const currentUser = this.regForm.value;
-    console.log(this.regForm.value)
-    this.currentUser = currentUser;
-    this.currentUser.id = 1;
-    this.currentUser.registered = true;
-    this.currentUser.reqsStatus = {
-      fruitMet: false,
-      vegMet: false,
-      proteinMet: false,
-      grainMet: false
-    };
-    localStorage.setItem('User', JSON.stringify(currentUser));
+    this.userService.updateUser(this.regForm.value);
+    UserService.storeUserLocal(this.regForm.value);
   }
 
   constructor(private userService: UserService,
@@ -46,6 +36,8 @@ export class RegisterComponent implements OnInit {
                }
 
   ngOnInit(): void {
+    this.userService.currentUser.subscribe(user => this.currentUser = user);
+    this.regForm.valueChanges.subscribe(value => console.log(value));
   }
 
 }

@@ -18,6 +18,7 @@ import { ExercisesComponent } from './exercises/exercises.component';
 
 import { FoodGroupsModule } from './food-groups/food-groups.module';
 import { AppRoutingModule } from './app-routing.module';
+import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
 
 @NgModule({
   declarations: [ AppComponent, 
@@ -28,7 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
     PlateComponent, 
     MessageComponent, 
     NavComponent, 
-    RegisterComponent, DefaultComponent, FarmersMarketComponent, ExercisesComponent],
+    RegisterComponent, DefaultComponent, FarmersMarketComponent, ExercisesComponent, TodaysGoalComponent],
   imports: [
     AppRoutingModule,
     CommonModule, 

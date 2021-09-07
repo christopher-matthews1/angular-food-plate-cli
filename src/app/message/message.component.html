@@ -1,4 +1,3 @@
-<section>
-    <p>{{(currentUser.reqsStatus.fruitMet) ? fruitMet : fruitNeeded}}</p>
-    <!-- <p *ngIf="(!currentUser.reqsStatus.fruitMet)">{{fruitNeeded}}, {{getName()}}</p> -->
+<section *ngIf="(currentUser.registered)">
+    <p>{{(currentUser.reqsStatus.fruitMet) ? fruitMet : fruitNeeded}}, {{getName()}}</p>
 </section>

@@ -18,16 +18,14 @@ export class MessageComponent implements OnInit {
     return "";
   }
 
-  // message: string = this.getMessage();
-
-  fruitNeeded: string = 'You still have more fruit to eat ' + this.getName();
-  fruitMet: string = 'You are all your fruit today ';
-  vegNeeded: string = 'You still have more fruit to eat ';
-  vegMet: string = 'You are all your vegtables today ';
-  proteinNeeded: string = 'You still have more fruit to eat ';
-  proteinMet: string = 'You are all your protein today ';
-  grainNeeded: string = 'You still have more fruit to eat ';
-  grainMet: string = 'You are all your grain today ';
+  fruitNeeded: string = 'You still have more fruit to eat';
+  fruitMet: string = 'You are all your fruit today';
+  vegNeeded: string = 'You still have more vegtables to eat';
+  vegMet: string = 'You are all your vegtables today';
+  proteinNeeded: string = 'You still have more protein to eat';
+  proteinMet: string = 'You are all your protein today';
+  grainNeeded: string = 'You still have more grain to eat';
+  grainMet: string = 'You are all your grain today';
 
 
   constructor(private userService: UserService) { }

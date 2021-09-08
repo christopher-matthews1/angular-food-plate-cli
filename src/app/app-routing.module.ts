@@ -6,6 +6,7 @@ import { ExercisesComponent } from "./exercises/exercises.component";
 import { FarmersMarketComponent } from "./farmers-market/farmers-market.component";
 import { foodGroupsRoutes } from "./food-groups/food-groups.routing";
 import { FoodComponent } from "./food/food.component";
+import { GoalsComponent } from "./goals/goals.component";
 import { PlateComponent } from "./plate/plate.component";
 import { RegisterComponent } from "./register/register.component";
 import { LeaveRegisterGuardService } from "./services/leave-register-guard.service";
@@ -27,6 +28,7 @@ const routes: Routes = [
             {path: 'farmers-market', component: FarmersMarketComponent},
             {path: 'exercises', component: ExercisesComponent},
             {path: 'nutritionInfo', component: FoodComponent},
+            {path: 'goals', component: GoalsComponent},
             {path: 'foodGroups',
                 loadChildren: () => import('./food-groups/food-groups.module')
                     .then(mod => mod.FoodGroupsModule)},

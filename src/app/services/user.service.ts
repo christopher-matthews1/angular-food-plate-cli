@@ -22,6 +22,7 @@ getUser(): User {
     this.currentUser = new BehaviorSubject(user);
     return user;
   } else {
+    this.user.reqsStatus.fruitMet = true;
     return this.user;
   }
 }
@@ -29,7 +30,7 @@ getUser(): User {
 updateUser(user: User) {
   user.id = 1;
   user.registered = true;
-  user.reqsStatus = {fruitMet: false, vegMet: false, proteinMet: false, grainMet: 
+  user.reqsStatus = {fruitMet: true, vegMet: false, proteinMet: false, grainMet: 
     false};
   this.currentUser.next(user);
 }

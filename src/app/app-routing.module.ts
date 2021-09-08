@@ -8,6 +8,8 @@ import { foodGroupsRoutes } from "./food-groups/food-groups.routing";
 import { FoodComponent } from "./food/food.component";
 import { PlateComponent } from "./plate/plate.component";
 import { RegisterComponent } from "./register/register.component";
+import { LeaveRegisterGuardService } from "./services/leave-register-guard.service";
+import { RegisterGuardService } from "./services/register-guard.service";
 
 const fallbackRoute: Route = {
     path: '**', component: DefaultComponent
@@ -18,8 +20,10 @@ const routes: Routes = [
         path: '',
         children: [
             {path: '', component: DefaultComponent},
-            {path: 'register', component: RegisterComponent},
-            {path: 'my-plate', component: PlateComponent},
+            {path: 'my-plate', component: PlateComponent, 
+                canActivate: [RegisterGuardService]},
+            {path: 'register', component: RegisterComponent,
+                canDeactivate: [LeaveRegisterGuardService]},
             {path: 'farmers-market', component: FarmersMarketComponent},
             {path: 'exercises', component: ExercisesComponent},
             {path: 'nutritionInfo', component: FoodComponent},
@@ -31,7 +35,8 @@ const routes: Routes = [
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    providers: [RegisterGuardService, LeaveRegisterGuardService]
 })
 
 export class AppRoutingModule {}

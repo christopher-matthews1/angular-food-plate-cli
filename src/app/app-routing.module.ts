@@ -27,7 +27,9 @@ const routes: Routes = [
             {path: 'farmers-market', component: FarmersMarketComponent},
             {path: 'exercises', component: ExercisesComponent},
             {path: 'nutritionInfo', component: FoodComponent},
-            ...foodGroupsRoutes,
+            {path: 'foodGroups',
+                loadChildren: () => import('./food-groups/food-groups.module')
+                    .then(mod => mod.FoodGroupsModule)},
             fallbackRoute
         ]
     }

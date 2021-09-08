@@ -17,7 +17,6 @@ import { DefaultComponent } from './components/default/default.component';
 import { FarmersMarketComponent } from './farmers-market/farmers-market.component';
 import { ExercisesComponent } from './exercises/exercises.component';
 
-import { FoodGroupsModule } from './food-groups/food-groups.module';
 import { AppRoutingModule } from './app-routing.module';
 import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
 import { FoodComponent } from './food/food.component';
@@ -41,7 +40,6 @@ import { FoodComponent } from './food/food.component';
     AppRoutingModule,
     CommonModule, 
     BrowserModule,
-    FoodGroupsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
